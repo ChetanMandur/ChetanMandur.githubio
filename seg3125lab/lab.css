@@ -1,0 +1,88 @@
+.maincontent{
+    text-align: center;
+    align-content: center;
+    background-color: #353b48;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 25%;
+    font-family:'Arial';
+}
+
+h1{
+    color: #dcdde1;
+    font-family:'Arial';
+    font-weight:900;
+}
+
+a{
+    color: #dcdde1;
+}
+
+textarea{
+    width:fit-content;
+}
+
+
+img{
+    border: #20252c;
+    border-style: solid;
+    object-fit: fill;
+    width: 100%;
+    height: 20%;
+
+}
+
+body{
+    background-color: #2f3640;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 25%;
+    background-color: #718093;
+}
+
+.question{
+    padding-top:1rem;
+    padding-bottom: 1rem;
+    border-bottom:#353b48 solid;
+}
+
+.questiontitle{
+    font-weight: bold;
+    padding-bottom: .7rem;
+}
+
+.submitbutton{
+    background-color:#dcdde1;
+    border:#353b48 None;
+    width: 11rem;
+    height: 2rem;
+    font-weight: bold;
+    font-size:medium;
+}
+
+.textbox{
+    background-color: #dcdde1;
+    border:none;
+    max-width: max-content;
+    width:11rem
+}
+
+select{
+    background-color: #dcdde1;
+    width:11rem;
+
+}
+
+.radiobtn{
+    color: #dcdde1;
+}
+
+.checkboxbtn{
+    color: #dcdde1;
+
+}

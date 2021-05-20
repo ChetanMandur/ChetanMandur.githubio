@@ -1,4 +1,85 @@
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<h1>SEG 3125 Labs</h1>
+<head>
+    <link rel="stylesheet" id="styles" type="text/css" href="seg3125lab/lab.css">
+    <title>Survey</title>
+</head>
+
+<body>
+    <h1 style="text-align:center">Survey for <a href="https://www.nike.com/ca/" target="_blank">Nike.com</a> UI</h1>
+
+    <div class="maincontent">
+        <a href="https://www.nike.com/ca/" target="_blank">
+            <img src="seg3125lab/nikeui.png"> 
+        </a>
+
+        <br>
+
+        <form action="seg3125lab/index.php" name="nikeuiform" method="POST">
+            <div class="question">
+                <div class="questiontitle">
+                    What's your thought on the screen space usage?
+                </div>
+                
+                <input class="textbox" type="text" id="screenusage" name="screenusage">
+            </div>
+
+
+
+            <div class="question">
+                <div class="questiontitle">
+                    Do you think the colour palete is easy on the eyes?
+                </div>
+                <input class="radiobtn" type="radio" id="colourpaleteeyesyes" name="colourpaleteeyes" value="yes"> Yes
+                <input class="radiobtn" type="radio" id="colourpaleteeyesno" name="colourpaleteeyes" value="no"> No
+            </div>
+            
+
+
+            <div class="question">
+                <div class="questiontitle">
+                    How often do you use this website? (Estimate)
+                </div>
+                <select id="nikeuiusage">
+                    <option value="Weekly">Weekly</option>
+                    <option value="Bi-Weekly">Bi-Weekly</option>
+                    <option value="Monthly">Monthly</option>
+                    <option value="Twice a year">Twice a year</option>
+                    <option value="Once a year">Once a year</option>
+                    <option value="Never">Never</option>
+                </select>
+            </div>
+            
+
+
+            <div class="question">
+                <div class="questiontitle">
+                    What elements do you like about this website?
+                </div>
+                <input class="checkboxbtn" type="checkbox" name="nikeuilike" value="stylelike">Style/Presentation<br>
+                <input class="checkboxbtn" type="checkbox" name="nikeuilike" value="usabilitylike">Usability<br>
+                <input class="checkboxbtn" type="checkbox" name="nikeuilike" value="functionalitylike">Functionality<br>
+
+            </div>
+
+
+            <div class="question">
+                <div class="questiontitle">
+                    Do you have any final comments?
+                </div>
+                <textarea class="textbox" rows="6" cols="30"></textarea>
+            </div>
+            
+            <div class="question">
+                <input class="submitbutton" type="submit" value="Submit Answers"/>
+            </div>
+
+        </form>
+    </div>
+
+    <footer>
+        <p>Website designed by: Chetan<br>
+    </footer>
+
+</body>
