@@ -19,10 +19,11 @@
 <div id="Client" class="tabcontent">
   <h3>Client Information</h3>
   <p>Tell us a bit about you.</p>
-    Perfer Organic: <input class="checkboxbtn" type="checkbox" name="nikeuilike" value="stylelike"> 
+    Perfer Organic: <input class="checkboxbtn" type="checkbox" id="organicSelect" name="organicSelect" value="organicSelect"
+    onchange="populateListProductChoices('dietSelect', 'displayProduct', this.id)"> 
     <br><br>
 	Choose a Category:
-	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct', 'organicSelect')">
 	<option value=""></option>
 	<option value="LactoseFree">LactoseFree</option>
     <option value="NutFree">NutFree</option>
