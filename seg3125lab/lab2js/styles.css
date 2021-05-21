@@ -16,6 +16,7 @@
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
+    color: #d3d3d3;
   }
   
   /* Change background color of buttons on hover */
@@ -64,4 +65,11 @@ body{
 .tabcontent{
   background-color: #3a404e;
   color:white;
+}
+
+footer {
+  color:#4a5463;
+  position:absolute;
+  bottom:0;
+  height:40px;   /* Height of the footer */
 }
