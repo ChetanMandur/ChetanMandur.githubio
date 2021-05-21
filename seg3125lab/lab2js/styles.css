@@ -35,3 +35,18 @@
     border: 1px solid #ccc;
     border-top: none;
   }
+
+  .maincontent{
+    text-align: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-left: 35%;
+    font-family:'Arial';
+}
+
+h1{
+  font-family:'Arial';
+  font-weight:900;
+}

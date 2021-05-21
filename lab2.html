@@ -9,46 +9,50 @@
 <body>
 
 <!-- Tab links, each one with an onclick event associated with it -->
-<div class="tab">
-  <button class="tablinks" id="defaultOpen" onclick="openInfo(event, 'Client')">Client</button>
-  <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
-  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
-</div>
+<div class = "maincontent">
+  <h1>SEG-O-Mart</h1>
+  <div class="tab">
+    <button class="tablinks" id="defaultOpen" onclick="openInfo(event, 'Client')">Client</button>
+    <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+    <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+  </div>
 
-<!-- Tab content -->
-<div id="Client" class="tabcontent">
-  <h3>Client Information</h3>
-  <p>Tell us a bit about you.</p>
-    Perfer Organic: <input class="checkboxbtn" type="checkbox" id="organicSelect" name="organicSelect" value="organicSelect"
-    onchange="populateListProductChoices('dietSelect', 'displayProduct', this.id)"> 
-    <br><br>
-	Choose a Category:
-	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct', 'organicSelect')">
-	<option value=""></option>
-	<option value="LactoseFree">LactoseFree</option>
-    <option value="NutFree">NutFree</option>
-    <option value="None">None</option>
-	</select>
-</div>
+  <!-- Tab content -->
+  <div id="Client" class="tabcontent">
+    <h2>Client Information</h2>
+    <p>Tell us a bit about you.</p>
+      Perfer Organic: <input class="checkboxbtn" type="checkbox" id="organicSelect" name="organicSelect" value="organicSelect"
+      onchange="populateListProductChoices('dietSelect', 'displayProduct', this.id)"> 
+      <br><br>
+    Choose a Category:
+    <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct', 'organicSelect')">
+    <option value=""></option>
+    <option value="LactoseFree">LactoseFree</option>
+      <option value="NutFree">NutFree</option>
+      <option value="None">None</option>
+    </select>
+  </div>
 
-<div id="Products" class="tabcontent">
-  <h3>Your targeted products</h3>
-  <p>We preselected products based on your restrictions.</p>
-	 Choose items to buy:
-	 <div id="displayProduct"></div>
-	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
-		Add selected items to cart.
-	</button>
-</div>
+  <div id="Products" class="tabcontent">
+    <h2>Your targeted products</h2>
+    <p>We preselected products based on your restrictions.</p>
+    Choose items to buy:
+    <div id="displayProduct"></div>
+    <br>
+    <button id="addCart" type="button" class="block" onclick="selectedItems()">
+      Add selected items to cart.
+    </button>
+  </div>
 
-<div id="Cart" class="tabcontent">
-  <h3>Cart</h3>
-  <p>Here is your cart.</p>
-  <div id="displayCart"></div>
+  <div id="Cart" class="tabcontent">
+    <h2>Cart</h2>
+    <p>Here is your cart.</p>
+    <div id="displayCart"></div>
+  </div>
 </div>
-
 <script src="seg3125lab\lab2js\groceries.js"></script>
 <script src="seg3125lab\lab2js\main.js"></script>
 <script>document.getElementById("defaultOpen").click();</script>
+
 </body>
 </html>
