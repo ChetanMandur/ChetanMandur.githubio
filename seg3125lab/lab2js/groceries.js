@@ -38,7 +38,7 @@ var products = [
         lactoseFree:false,
         nutFree: true, 
         organic: true,
-        price:5.00,
+        price: 5.00,
     },
     {
         name:"milk",
@@ -86,43 +86,46 @@ var products = [
 
 function restrictListProducts(prods, restriction, organic) {
 	let product_names = [];
-    console.log(organic)
 	for (let i=0; i<prods.length; i+=1) {
 		if ((restriction == "LactoseFree") && (prods[i].lactoseFree == true)){
             if (organic == true){
                 if (prods[i].organic == true){
-                    product_names.push(prods[i].name);
+                    product_names.push(prods[i]);
                 }
 
             }
             else{
-                product_names.push(prods[i].name);
+                product_names.push(prods[i]);
             }
 			
 		}
 		else if ((restriction == "NutFree") && (prods[i].nutFree == true)){
 			if (organic == true ){
                 if (prods[i].organic){
-                    product_names.push(prods[i].name);
+                    product_names.push(prods[i]);
                 }
 
             }
             else{
-                product_names.push(prods[i].name);
+                product_names.push(prods[i]);
             }
 		}
 		else if (restriction == "None"){
 			if (organic == true){
                 if (prods[i].organic == true){
-                    product_names.push(prods[i].name);
+                    product_names.push(prods[i]);
                 }
 
             }
             else{
-                product_names.push(prods[i].name);
+                product_names.push(prods[i]);
             }
 		}
 	}
+
+
+    product_names.sort(function(a, b){return a.price - b.price});
+
 	return product_names;
 }
 
@@ -134,5 +137,5 @@ function getTotalPrice(chosenProducts) {
 			totalPrice += products[i].price;
 		}
 	}
-	return totalPrice;
+	return totalPrice.toFixed(2);
 }
