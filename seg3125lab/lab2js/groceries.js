@@ -5,28 +5,28 @@
 var products = [
     //No restrictions
 	{
-		name: "brocoli",
+		name: "Brocoli",
 		lactoseFree: true,
 		nutFree: true,
         organic: true,
 		price: 1.99
 	},
 	{
-		name: "bread",
+		name: "Bread",
 		lactoseFree: true,
 		nutFree: true,
         organic: false,
 		price: 2.35
 	},
 	{
-		name: "salmon",
+		name: "Salmon",
 		lactoseFree: true,
 		nutFree: true,
         organic: false,
 		price: 10.00
 	},
     {
-        name: "lettuce",
+        name: "Lettuce",
         lactoseFree: true,
         nutFree: true,
         organic: true,
@@ -34,21 +34,21 @@ var products = [
     },
     //Lactose products
     {
-        name: "cheese",
+        name: "Cheese",
         lactoseFree:false,
         nutFree: true, 
         organic: true,
         price: 5.00,
     },
     {
-        name:"milk",
+        name:"Milk",
         lactoseFree:false,
         nutFree: true,
         organic: false,
         price:6.00,
     },
     {
-        name:"yogurt",
+        name:"Yogurt",
         lactoseFree:false,
         nutFree: true,
         organic: false,
@@ -56,21 +56,21 @@ var products = [
     },
     //Nut products
     {
-        name:"almond",
+        name:"Almonds",
         lactoseFree: true,
         nutFree: false,
         organic: true,
         price: 1.25,
     },
     {
-        name: "peanut butter",
+        name: "Peanut Butter",
         lactoseFree: true,
         nutFree: false,
         organic: true,
         price: 4.50,
     },
     {
-        name: "cookies",
+        name: "Cookies",
         lactoseFree: true,
         nutFree: false,
         organic: false,
@@ -122,8 +122,6 @@ function restrictListProducts(prods, restriction, organic) {
             }
 		}
 	}
-
-
     product_names.sort(function(a, b){return a.price - b.price});
 
 	return product_names;
