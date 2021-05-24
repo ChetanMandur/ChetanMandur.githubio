@@ -6,7 +6,7 @@
     
 </head>
 
-<body>
+<body onload= "populateListProductChoices('NutFree', 'LactoseFree','organicSelect', 'displayProduct')">
 
 <!-- Tab links, each one with an onclick event associated with it -->
 <div class = "maincontent">
@@ -22,15 +22,15 @@
     <h2>Client Information</h2>
     <p>Tell us a bit about you.</p>
       Perfer Organic: <input class="checkboxbtn" type="checkbox" id="organicSelect" name="organicSelect" value="organicSelect"
-      onchange="populateListProductChoices('dietSelect', 'displayProduct', this.id)"> 
+      onchange="populateListProductChoices('NutFree', 'LactoseFree','organicSelect', 'displayProduct')"> 
       <br><br>
-    Choose a Category:
-    <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct', 'organicSelect')">
-    <option value=""></option>
-    <option value="LactoseFree">LactoseFree</option>
-      <option value="NutFree">NutFree</option>
-      <option value="None">None</option>
-    </select>
+    Choose Restrictions:
+    <br>
+    Nut Free: <input class="checkboxbtn" type="checkbox" id="NutFree" name="NutFree" value="NutFree"
+      onchange="populateListProductChoices('NutFree', 'LactoseFree','organicSelect', 'displayProduct')"> 
+    
+    Lactose Free: <input class="checkboxbtn" type="checkbox" id="LactoseFree" name="LactoseFree" value="LactoseFree"
+      onchange="populateListProductChoices('NutFree', 'LactoseFree','organicSelect', 'displayProduct')"> 
   </div>
 
   <div id="Products" class="tabcontent">
