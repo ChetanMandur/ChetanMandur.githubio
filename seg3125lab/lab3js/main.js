@@ -80,8 +80,8 @@ function selectedItems(){
 	
 	// build list of selected item
 	var para = document.createElement("P");
-	para.innerHTML = "<u>You selected : </u>";
-	para.appendChild(document.createElement("br"));
+	// para.innerHTML = "<u>You selected : </u>";
+	// para.appendChild(document.createElement("br"));
 	for (i = 0; i < ele.length; i++) { 
 		if (ele[i].checked) {
 			para.appendChild(document.createTextNode(ele[i].value));

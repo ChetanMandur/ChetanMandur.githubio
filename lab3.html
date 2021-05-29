@@ -11,49 +11,43 @@
 <!-- Tab links, each one with an onclick event associated with it -->
 <div class = "maincontent">
   <h1>SEG-O-Mart</h1>
-  <!-- <div class="tab">
-    <button class="tablinks" id="defaultOpen" onclick="openInfo(event, 'Client')">Client</button>
-    <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
-    <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
-  </div> -->
 
   <!-- Tab content -->
   <div id="Client" class="tabcontent">
-    <h2>Client Information</h2>
-    <p>Tell us a bit about you.</p>
-      Perfer Organic: <input class="checkboxbtn" type="checkbox" id="organicSelect" name="organicSelect" value="organicSelect"
-      onchange="populateListProductChoices('NutFree', 'LactoseFree','organicSelect', 'displayProduct')"> 
-      <br><br>
-    Choose Restrictions:
+    <h2>Choose Your Preferences & Restrictions</h2>
+
+    <u>Select Your Preferences:</u>
+    <br>
+    Perfer Organic: <input class="checkboxbtn" type="checkbox" id="organicSelect" name="organicSelect" value="organicSelect"
+    onchange="populateListProductChoices('NutFree', 'LactoseFree','organicSelect', 'displayProduct')"> 
+
+    <br><br>
+
+    <u>Choose Restrictions:</u>
     <br>
     Nut Free: <input class="checkboxbtn" type="checkbox" id="NutFree" name="NutFree" value="NutFree"
-      onchange="populateListProductChoices('NutFree', 'LactoseFree','organicSelect', 'displayProduct')"> 
-    
+    onchange="populateListProductChoices('NutFree', 'LactoseFree','organicSelect', 'displayProduct')"> 
+    <br>
     Lactose Free: <input class="checkboxbtn" type="checkbox" id="LactoseFree" name="LactoseFree" value="LactoseFree"
-      onchange="populateListProductChoices('NutFree', 'LactoseFree','organicSelect', 'displayProduct')"> 
+    onchange="populateListProductChoices('NutFree', 'LactoseFree','organicSelect', 'displayProduct')"> 
 
-      <button class="tablinks" onclick="openInfo(event, 'Products')">Next</button>
+    <br>
+    <button class="nextbtn" onclick="openInfo(event, 'Products')">Next</button>
   </div>
 
   <div id="Products" class="tabcontent">
-    <h2>Your targeted products</h2>
-    <p>We preselected products based on your restrictions.</p>
-    <u>Choose items to buy:</u>
-    <div id="displayProduct"></div>
+    <h2>Add Products to Cart</h2>
+    <div class= "productList" id="displayProduct"></div>
     <br>
-    <!-- <button id="addCart" type="button" class="block" onclick="selectedItems()">
-      Add to cart.
-    </button> -->
     
-    <button class="tablinks" id="defaultOpen" onclick="openInfo(event, 'Client')">Back</button>
-    <button class="tablinks" onclick="openInfo(event, 'Cart'), selectedItems()">Next</button>
+    <button class="backbtn" id="defaultOpen" onclick="openInfo(event, 'Client')">Back</button>
+    <button class="nextbtn" onclick="openInfo(event, 'Cart'), selectedItems()">Next</button>
   </div>
 
   <div id="Cart" class="tabcontent">
-    <h2>Cart</h2>
-    <p>Here is your cart.</p>
+    <h2>Your Cart</h2>
     <div id="displayCart"></div>
-    <button class="tablinks" onclick="openInfo(event, 'Products')">Back</button>
+    <button class="backbtn" onclick="openInfo(event, 'Products')">Back</button>
   </div>
 </div>
 
