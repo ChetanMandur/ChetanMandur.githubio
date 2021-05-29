@@ -84,3 +84,23 @@ footer {
   padding: 10px;
   
 }
+
+.displayCart{
+  position: relative;
+  text-align: left;
+  margin: 0% 30% 0% 38%;
+  /* width: 60%; */
+  padding: 10px;
+
+}
+
+.totalPrice{
+  font-weight: bold;
+  text-decoration: underline;
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+
+}

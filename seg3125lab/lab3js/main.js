@@ -82,16 +82,23 @@ function selectedItems(){
 	var para = document.createElement("P");
 	// para.innerHTML = "<u>You selected : </u>";
 	// para.appendChild(document.createElement("br"));
+	var item_number = 1;
 	for (i = 0; i < ele.length; i++) { 
 		if (ele[i].checked) {
-			para.appendChild(document.createTextNode(ele[i].value));
+			para.appendChild(document.createTextNode(item_number+ ") " + ele[i].value));
 			para.appendChild(document.createElement("br"));
 			chosenProducts.push(ele[i].value);
+			item_number++;
 		}
 	}
 		
 	// add paragraph and total price
 	c.appendChild(para);
-	c.appendChild(document.createTextNode("Total Price is $" + getTotalPrice(chosenProducts)));
+	var price = document.getElementById('totalPrice');
+	price.innerHTML = null;
+	price.appendChild(document.createTextNode("Total Price is $" + getTotalPrice(chosenProducts)));
+
+
+	// c.appendChild(document.createTextNode("Total Price is $" + getTotalPrice(chosenProducts)));
 		
 }
