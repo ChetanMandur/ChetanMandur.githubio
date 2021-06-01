@@ -9,21 +9,24 @@
   text-align: center;
   padding: 6px 12px;
   height: 26rem;
-  border: 1px solid #1c2025;
-  border-top: none;
+  /* border: 1px solid #1c2025; */
+  /* border-top: none; */
   position: relative;
   min-width: 300px;
+  border-radius: 10px;
+  
 }
 
 .maincontent{
+  font-family: Arial;
   text-align: center;
-  align-content: center;
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  margin-left: 35%;
-  font-family:'Arial';
   min-width: 400px;
+  width: 30%;
+
+
+  margin-left: auto;
+  margin-right: auto;
+  
 }
 
 h1{
@@ -47,9 +50,9 @@ body{
 
 footer {
   color:#4a5463;
-  position:absolute;
+  position:fixed;
   bottom:0;
-  height:40px;   /* Height of the footer */
+  height:auto; 
 }
 
 .nextbtn{
@@ -62,6 +65,8 @@ footer {
   outline: none;
   cursor: pointer;
   padding: 7px 16px;
+  border-radius: 10px  0px  10px 0px;
+  
 }
 
 .backbtn{
@@ -74,6 +79,7 @@ footer {
   outline: none;
   cursor: pointer;
   padding: 7px 16px;
+  border-radius: 0px  10px  0px 10px;
 }
 
 .productList{
@@ -102,5 +108,12 @@ footer {
   bottom: 0px;
   transform: translate(-50%, -50%);
   margin: 0 auto;
+
+}
+
+.restrictionList{
+  position: relative;
+  text-align: left;
+  margin: 0% 30% 0% 38%;
 
 }

@@ -14,23 +14,25 @@
 
   <!-- Tab content -->
   <div id="Client" class="tabcontent">
-    <h2>Choose Your Preferences & Restrictions</h2>
+    <h2>Preferences & Restrictions</h2>
 
     <u>Select Your Preferences:</u>
     <br>
-    Perfer Organic: <input class="checkboxbtn" type="checkbox" id="organicSelect" name="organicSelect" value="organicSelect"
-    onchange="populateListProductChoices('NutFree', 'LactoseFree','organicSelect', 'displayProduct')"> 
-
+    <div class="restrictionList">
+      <input class="checkboxbtn" type="checkbox" id="organicSelect" name="organicSelect" value="organicSelect"
+      onchange="populateListProductChoices('NutFree', 'LactoseFree','organicSelect', 'displayProduct')"> Organic
+    </div>
     <br><br>
 
     <u>Choose Restrictions:</u>
     <br>
-    Nut Free: <input class="checkboxbtn" type="checkbox" id="NutFree" name="NutFree" value="NutFree"
-    onchange="populateListProductChoices('NutFree', 'LactoseFree','organicSelect', 'displayProduct')"> 
-    <br>
-    Lactose Free: <input class="checkboxbtn" type="checkbox" id="LactoseFree" name="LactoseFree" value="LactoseFree"
-    onchange="populateListProductChoices('NutFree', 'LactoseFree','organicSelect', 'displayProduct')"> 
-
+    <div class="restrictionList">
+      <input class="checkboxbtn" type="checkbox" id="NutFree" name="NutFree" value="NutFree"
+      onchange="populateListProductChoices('NutFree', 'LactoseFree','organicSelect', 'displayProduct')"> Nut Free
+      <br>
+      <input class="checkboxbtn" type="checkbox" id="LactoseFree" name="LactoseFree" value="LactoseFree"
+      onchange="populateListProductChoices('NutFree', 'LactoseFree','organicSelect', 'displayProduct')"> Lactose Free
+    </div>
     <br>
     <button class="nextbtn" onclick="openInfo(event, 'Products')">Next</button>
   </div>
