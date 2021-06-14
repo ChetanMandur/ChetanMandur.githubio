@@ -32,15 +32,49 @@
 </style>
 
 <body>
-    <nav class="navbar bg-dark text-white p-3 ">
+    <!-- <nav class="navbar navbar-dark navbar-expand-lg bg-dark text-white p-3 ">
         <p class="h1">🏥 SEG Clinic</p>
-    </nav>
+
+        <div class="collapse navbar-collapse " id="collapsibleNavbar">
+            <ul class="navbar-nav ms-4">
+                <li class="nav-item">
+                    <a class="nav-link" style="font-size:20px" href="#ourservices">🩺Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="font-size:20px" href="#theexperts">👩‍⚕️Experts</a>
+                </li>
+            </ul>
+        </div>
+    </nav> -->
+
+
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark text-white p-3 ">
+        <div class="container-fluid">
+          <p class="h1">🏥 SEG Clinic</p>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-4">
+                <li class="nav-item">
+                    <a class="nav-link" style="font-size:20px" href="#ourservices">🩺Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="font-size:20px" href="#theexperts">👩‍⚕️Experts</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+
     <div class="container">
 
         <!-- HERE FOR YOU -->
         <div class=" p-3 my-3 border bg-light">
             <p class="h1">❤Here for you</p>
-            <p class="p-4 my-3" style="font-size: 25px">
+            <p class="p-4 my-3" style="font-size: 23px">
             We are at SEG Clinic strive to ensure all our clients receive the best treatment.
             <br>
             <br>
@@ -49,7 +83,7 @@
         </div>
 
         <!-- SERVICES -->
-        <div class=" p-3 my-3 border" style="background-color: #74baffd5;">
+        <div class=" p-3 my-3 border" id="ourservices" style="background-color: #74baffd5;">
             
             <p class="h1">🩺Our Services</p>
             <table class="table  table-hover">
@@ -87,8 +121,7 @@
 
         </div>
 
-        <div class=" p-3 my-3 border bg-light">
-            
+        <div class=" p-3 my-3 border bg-light" id="theexperts">
             <p class="h1">👩‍⚕️The Experts</p>
             <div class ="row justify-content-center">
                 <div class="card" style="width: 18rem;">
