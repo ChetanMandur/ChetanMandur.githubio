@@ -25,32 +25,105 @@ function disableDates(date) {
     return [ unavailableDates.indexOf(string) === -1 ]
 }
 
+function isEmail(email) {
+    var a = document.getElementById(email).value;
+    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    return regex.test(a);
+}
+
+function isCCNumber(cc) {
+    var ccnumber = document.getElementById(cc).value;
+    
+    if (isNaN(ccnumber)){
+        return false;
+    }
+    else{
+        if (ccnumber.length == 16){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+}
+
+function isCVCNumber(cvc) {
+    var cvcnumber = document.getElementById(cvc).value;
+    
+    if (isNaN(cvcnumber)){
+        return false;
+    }
+    else{
+        if (cvcnumber.length == 3){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+}
+
+function isCCDateNumber(cvc) {
+    var ccdate = document.getElementById(cvc).value;
+    var ccmonth = ccdate.split("/")[0];
+    var ccyear = ccdate.split("/")[1];
+
+    if (isNaN(ccmonth) && isNaN(ccyear)){
+        return false;
+    }
+    else{
+        if (ccmonth.length == 2 && ccyear.length==4){
+            if (parseInt(ccmonth)>12){
+                return false;
+            }
+            else{
+                return true;
+            }
+            
+        }
+        else{
+            return false;
+        }
+    }
+}
+
 
 // HERE, JQuery "LISTENING" starts
 $(document).ready(function(){
 
-    // phone validation, it calls validatePhone
-    // and also some feedback as an Alert + putting a value in the input that shows the format required
-    // the "addClass" will use the class "error" defined in style.css and add it to the phone input
-    // The "error" class in style.css defines yellow background and red foreground
-    $("#phone").on("change", function(){
-        if (!validatePhone("phone")){
-            alert("Wrong format for phone");
-            $("#phone").val("(xxxx)");
-            $("#phone").addClass("error");
-        }
-        else {
-            $("#phone").removeClass("error");
+
+    $("#emailInput").on("change", function(){
+        if (!isEmail("emailInput")){
+            alert("Email format is incorrect!")
+            $("#emailInput").val("");
         }
     });
 
-    // To change the style of the calender, look in jqueryui.com, under Themes, in the ThemeRoller Gallery
-    // You can try different themes (the names are under the calendars) / This is Excite Bike
-    // To use a different theme you must include its css in your HTML file.
-    // The one I included in my HTML is the Excite Bike, but you can try others
+    $("#ccInput").on("change", function(){
+        if (!isCCNumber("ccInput")){
+            alert("Credit card number is invalid!")
+            $("#ccInput").val("");
+        }
+    });
 
-    // Also, here is a good tutorial for playing with the datepicker in https://webkul.com/blog/jquery-datepicker/
-    // Datepicker is also documented as one of the widgets here: https://api.jqueryui.com/category/widgets/
+    $("#cvcInput").on("change", function(){
+        if (!isCVCNumber("cvcInput")){
+            alert("CVC number is invalid!")
+            $("#cvcInput").val("");
+        }
+    });
+
+    $("#ccdateInput").on("change", function(){
+        if (!isCCDateNumber("ccdateInput")){
+            alert("CC Date is invalid!")
+            $("#ccdateInput").val("");
+        }
+    });
+
+
+
+
+
     $( "#dateInput" ).datepicker(
         {
             dateFormat: setDateFormat,
@@ -70,6 +143,17 @@ $(document).ready(function(){
         'minTime': '7am',
         'maxTime': '6pm'
     });
+
+    $('#timeInput').on('timeFormatError', function() {
+        alert("Time format is incorrect!")
+        $('#timeInput').val('');
+    });
+
+    $('#timeInput').on('timeRangeError', function() {
+        alert("Please select a time between 7am and 6pm")
+        $('#timeInput').val('');
+    });
+
 
     $('#phoneInput').usPhoneFormat({
         format: '(xxx) xxx-xxxx'

@@ -12,12 +12,13 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-    <!-- timepicker -->
+    <!-- timepicker  https://www.jonthornton.com/jquery-timepicker/ -->
     <link rel="stylesheet" type="text/css" href="seg3125lab\lab5js\jquery.timepicker.css">
     <script type="text/javascript" src="seg3125lab\lab5js\jquery.timepicker.js"></script>
 
-    <!-- phonenumber thing -->
+    <!-- phonenumber thing https://www.jqueryscript.net/form/jQuery-Input-Mask-Phone-Numbers.html -->
     <script src="seg3125lab\lab5js\jquery-input-mask-phone-number.js"></script>
+
 
     <script src="seg3125lab\lab5js\main.js"></script>
     <title>SEG Clinic</title>
@@ -263,14 +264,16 @@
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Time</label>
                 <br>
-                <input type="text" placeholder="hh/mm/midday" id="timeInput">
+                <input type="text" placeholder="hh:mm+midday" id="timeInput">
                 <!-- <input class="form-control" type="time" id="timeInput"> -->
             </div>
 
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Credit Card</label>
+                <label for="exampleFormControlInput1" class="form-label">Credit Card Info</label>
                 <br>
-                <input type="text" id="debit" title="We ask for your credit card number in case of no-show, 20$ will be charged."></p>
+                <input placeholder="16 digit number" maxlength="16" type="text" id="ccInput" title="Typically on the front of your card">
+                <input style="width: 3rem"  maxlength="3" placeholder="CVC" type="text" id="cvcInput" title="Typically on the back of your card">
+                <input style="width: 4.5rem" maxlength="7" placeholder="mm/yyyy" type="text" id="ccdateInput">
             </div>
 
             
