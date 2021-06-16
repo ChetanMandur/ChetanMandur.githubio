@@ -5,7 +5,21 @@
     <meta charset="utf-8">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link href="styles/styles.css" rel="stylesheet" type="text/css">
+    <!-- <link href="styles/styles.css" rel="stylesheet" type="text/css"> -->
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/base/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- timepicker -->
+    <link rel="stylesheet" type="text/css" href="seg3125lab\lab5js\jquery.timepicker.css">
+    <script type="text/javascript" src="seg3125lab\lab5js\jquery.timepicker.js"></script>
+
+    <!-- phonenumber thing -->
+    <script src="seg3125lab\lab5js\jquery-input-mask-phone-number.js"></script>
+
+    <script src="seg3125lab\lab5js\main.js"></script>
     <title>SEG Clinic</title>
 </head>
 <style>
@@ -32,21 +46,6 @@
 </style>
 
 <body>
-    <!-- <nav class="navbar navbar-dark navbar-expand-lg bg-dark text-white p-3 ">
-        <p class="h1">🏥 SEG Clinic</p>
-
-        <div class="collapse navbar-collapse " id="collapsibleNavbar">
-            <ul class="navbar-nav ms-4">
-                <li class="nav-item">
-                    <a class="nav-link" style="font-size:20px" href="#ourservices">🩺Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" style="font-size:20px" href="#theexperts">👩‍⚕️Experts</a>
-                </li>
-            </ul>
-        </div>
-    </nav> -->
-
 
     <nav class="navbar navbar-dark navbar-expand-lg bg-dark text-white p-3 ">
         <div class="container-fluid">
@@ -179,15 +178,15 @@
                         <table>
                             <tbody>
                                 <tr>
-                                    <td style="padding-right: 11px;">Monday-Friday</td>
+                                    <td style="padding-right: 20px;">Monday-Friday</td>
                                     <td>7am-6pm</td>
                                 </tr>
                                 <tr>
-                                    <td>Saturday</td>
-                                    <td>9am-5pm</td>
+                                    <td>Saturday-Sunday</td>
+                                    <td>Closed</td>
                                 </tr>
                                 <tr>
-                                    <td>Sunday</td>
+                                    <td>Holidays</td>
                                     <td>Closed</td>
                                 </tr>
                             </tbody>
@@ -248,14 +247,33 @@
             </div>
 
             <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
+                <br>
+                <input type="text" placeholder="(xxx) xxx-xxxx" id="phoneInput">
+            </div>
+
+
+            <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Date</label>
-                <input class="form-control" type="date" id="dateInput">
+                <!-- <input class="form-control" type="date" id="dateInput"> -->
+                <br>
+                <input placeholder="mm/dd/yyyy" type="text" id="dateInput">
             </div>
 
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Time</label>
-                <input class="form-control" type="time" id="timeInput">
+                <br>
+                <input type="text" placeholder="hh/mm/midday" id="timeInput">
+                <!-- <input class="form-control" type="time" id="timeInput"> -->
             </div>
+
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Credit Card</label>
+                <br>
+                <input type="text" id="debit" title="We ask for your credit card number in case of no-show, 20$ will be charged."></p>
+            </div>
+
+            
             
 
         </div>
