@@ -44,29 +44,35 @@
         color: #212529;
         text-decoration: none;
     }
+
 </style>
 
 <body>
-
     <nav class="navbar navbar-dark navbar-expand-lg bg-dark text-white p-3 ">
         <div class="container-fluid">
-          <p class="h1">🏥 SEG Clinic</p>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <p class="h1">🏥 SEG Clinic</p>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-4">
-                <li class="nav-item">
-                    <a class="nav-link" style="font-size:20px" href="#ourservices">🩺Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" style="font-size:20px" href="#theexperts">👩‍⚕️Experts</a>
-                </li>
-            </ul>
-          </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-4 me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" style="font-size:20px" href="#ourservices">🩺Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="font-size:20px" href="#theexperts">👩‍⚕️Experts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="font-size:20px" href="#additionalInfo">🗺Contact Info</a>
+                    </li>
+                </ul>
+                <form class="d-flex ms-4">
+                    <button type="button" onclick="dropDownSelect('serviceSelection', 'CustomKneeBrace')"class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookPopup">Book Now!</button>
+                </form>
+            </div>
         </div>
       </nav>
-
 
 
     <div class="container">
@@ -91,28 +97,27 @@
                     <tr>
                         <td class="h5">Custom Knee Brace</td>
                         <td>$60 (Fitting) +$700* (Product)</td>
-                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Book</button></td>
-
+                        <td><button type="button" onclick="dropDownSelect('serviceSelection', 'CustomKneeBrace')" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookPopup">Book</button></td>
                     </tr>
                     <tr>
                         <td class="h5">COVID-19 Test (for Travel)</td>
                         <td>$60</td>
-                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Book</button></td>
+                        <td><button type="button"  onclick="dropDownSelect('serviceSelection', 'Covid19Test')" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookPopup">Book</button></td>
                     </tr>
                     <tr>
                         <td class="h5">Childhood Immunizations </td>
                         <td>Free</td>
-                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Book</button></td>
+                        <td><button type="button" onclick="dropDownSelect('serviceSelection', 'ChildhoodImm')" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookPopup">Book</button></td>
                     </tr>
                     <tr>
                         <td class="h5">Standard Checkup</td>
                         <td>$60</td>
-                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Book</button></td>
+                        <td><button type="button" onclick="dropDownSelect('serviceSelection', 'StandCheckup')" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookPopup">Book</button></td>
                     </tr>
                     <tr>
                         <td class="h5">Allergy Consultation</td>
                         <td>$100</td>
-                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Book</button></td>
+                        <td><button type="button" onclick="dropDownSelect('serviceSelection', 'AllergyCon')" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookPopup">Book</button></td>
                     </tr>
                 </tbody>
             </table>
@@ -163,14 +168,11 @@
     </div>
 
 
-    <div class=" p-3 my-3  bg-light">
-        <p class="h6 text-center">Additional Information</p>
+    <div class=" p-3 my-3  bg-light" id="additionalInfo">
+        <p class="h6 text-center">🗺 Contact Info</p>
         <div class = "container">
             <div class = "row justify-content-center">
                 <div class="col-xl">
-                    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11202.015044541004!2d-75.6787727!3d45.4193455!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5d172052e644e25!2sSITE%20Food%20Court!5e0!3m2!1sen!2sca!4v1623013267071!5m2!1sen!2sca" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
-                    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11202.015044541004!2d-75.6787727!3d45.4193455!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5d172052e644e25!2sSITE%20Food%20Court!5e0!3m2!1sen!2sca!4v1623013267071!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
-                    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11202.015044541004!2d-75.6787727!3d45.4193455!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5d172052e644e25!2sSITE%20Food%20Court!5e0!3m2!1sen!2sca!4v1623011005621!5m2!1sen!2sca" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11202.015044541004!2d-75.6787727!3d45.4193455!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5d172052e644e25!2sSITE%20Food%20Court!5e0!3m2!1sen!2sca!4v1623013267071!5m2!1sen!2sca" 
                     width="500" height="300" style="border:0;width:100%" allowfullscreen="" loading="lazy"></iframe>
                 </div>
@@ -219,7 +221,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="bookPopup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -228,7 +230,26 @@
         </div>
         <div class="modal-body">
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">First Name</label>
+                <label for="exampleFormControlInput1" class="form-label">*Pick a service:</label>
+                <select id="serviceSelection">
+                    <option value="CustomKneeBrace">Custom Knee Brace</option>
+                    <option value="Covid19Test">COVID-19 Test (for Travel)</option>
+                    <option value="ChildhoodImm">Childhood Immunizations</option>
+                    <option value="StandCheckup">Standard Checkup</option>
+                    <option value="AllergyCon">Allergy Consultation</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">*Pick an expert:</label>
+                <select id="expectSelection">
+                    <option value="KevinSelect">George Murphy</option>
+                    <option value="UziSelect">Uziel Vertrees</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">*First Name</label>
                 <input type="email" class="form-control" id="firstName" placeholder="John">
             </div>
 
@@ -238,38 +259,38 @@
             </div>
 
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+                <label for="exampleFormControlInput1" class="form-label">*Last Name</label>
                 <input type="email" class="form-control" id="lastName" placeholder="Smith">
             </div>
 
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Email</label>
+                <label for="exampleFormControlInput1" class="form-label">*Email</label>
                 <input type="email" class="form-control" id="emailInput" placeholder="name@example.com">
             </div>
 
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
+                <label for="exampleFormControlInput1" class="form-label">*Phone Number</label>
                 <br>
                 <input type="text" placeholder="(xxx) xxx-xxxx" id="phoneInput">
             </div>
 
 
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Date</label>
+                <label for="exampleFormControlInput1" class="form-label" >*Date</label>
                 <!-- <input class="form-control" type="date" id="dateInput"> -->
                 <br>
-                <input placeholder="mm/dd/yyyy" type="text" id="dateInput">
+                <input placeholder="mm/dd/yyyy" readonly="readonly" type="text" id="dateInput">
             </div>
 
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Time</label>
+                <label for="exampleFormControlInput1" class="form-label">*Time</label>
                 <br>
                 <input type="text" placeholder="hh:mm+midday" id="timeInput">
                 <!-- <input class="form-control" type="time" id="timeInput"> -->
             </div>
 
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Credit Card Info</label>
+                <label for="exampleFormControlInput1" class="form-label">*Credit Card Info</label>
                 <br>
                 <input placeholder="16 digit number" maxlength="16" type="text" id="ccInput" title="Typically on the front of your card">
                 <input style="width: 3rem"  maxlength="3" placeholder="CVC" type="text" id="cvcInput" title="Typically on the back of your card">
@@ -282,7 +303,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Book now</button>
+          <button type="button" onclick="validateFields()" class="btn btn-primary">Book now</button>
         </div>
       </div>
     </div>

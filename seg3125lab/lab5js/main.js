@@ -27,7 +27,7 @@ function disableDates(date) {
 
 function isEmail(email) {
     var a = document.getElementById(email).value;
-    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z]{2,4})+$/;
     return regex.test(a);
 }
 
@@ -87,6 +87,47 @@ function isCCDateNumber(cvc) {
     }
 }
 
+function dropDownSelect(id, selection){
+    try{
+        $("#"+id).val(selection);
+    }
+    catch{
+
+    }
+    
+}
+
+function validateFields(){
+    var elements = [];
+    var check = true ;
+    elements.push(document.getElementById("firstName").value);
+    elements.push(document.getElementById("lastName").value);
+
+    elements.push(document.getElementById("emailInput").value);
+    elements.push(document.getElementById("phoneInput").value);
+    elements.push(document.getElementById("dateInput").value);
+    elements.push(document.getElementById("timeInput").value);
+
+    elements.push(document.getElementById("ccInput").value);
+    elements.push(document.getElementById("cvcInput").value);
+    elements.push(document.getElementById("ccdateInput").value);
+
+    for (val of elements){
+        if (val == ""){
+            check = false;
+            
+        }
+    }
+    if (!check){
+        alert("Properly fill out all marked fields!");
+    }
+    else{
+        alert("Booking successful!");
+        $('#bookPopup').modal('hide');
+    }
+    
+
+}
 
 // HERE, JQuery "LISTENING" starts
 $(document).ready(function(){
@@ -134,6 +175,7 @@ $(document).ready(function(){
             beforeShowDay: disableDates
         }
     );
+
     
     $('#timeInput').timepicker({
         'disableTimeRanges': [
