@@ -52,14 +52,37 @@
         transform: translate(-50%, -50%);
         text-align: center;
     }
+    .centeredBottom {
+        position: absolute;
+        top: 93%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .cardScroll{
+        scroll-margin: 8vh;
+    }
+
+    .navTitleLink{
+        color: white;
+        text-decoration: none;
+    }
+
+    .navTitleLink:hover{
+
+        color: white;
+        text-decoration: none;
+    }
 
 
 </style>
 
 <body>
-    <nav class="navbar navbar-dark navbar-expand-lg bg-dark text-white p-3 ">
+    <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-dark text-white">
         <div class="container-fluid">
-            <p class="h1">🏥 SEG Clinic</p>
+            <a class="h1 navTitleLink" href="#hereforyou">🏥 SEG Clinic</a>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -84,27 +107,28 @@
       </nav>
     
     <div class="card">
-        <img src="seg3125lab/medicalclinic1.jpg" style="height:30rem" class="card-img-top">
-        <p class="h1 centered" style="color: black;background-color: #f8f9faa8; padding:30px; border: 1px solid #dee2e6!important;">Welcome to SEG Clinic 😊</p>
+        <img src="seg3125lab/medicalclinic1.jpg" style="height:100vh" class="card-img-top">
+        <p class="h1 centered" style="color: black;background-color: #f8f9fa88; padding:30px; border: 1px solid #dee2e6!important;">Welcome to SEG Clinic 😊</p>
+        <a class="h1 centeredBottom" style= "text-decoration: none;" href="#hereforyou">🔽</a>
     </div>
     
     <div class="container">
         
         <!-- HERE FOR YOU -->
-        <div class=" p-3 my-3 border bg-light">
+        <div class=" p-3 my-3 border bg-light cardScroll" id="hereforyou" >
             <p class="h1">❤Here for you</p>
             <p class="p-4 my-3" style="font-size: 23px">
             We are at SEG Clinic strive to ensure all our clients receive the best treatment.
             <br>
-            <br>
+            <br >
             With our team of top rated doctors, our goal is to meet your needs as quickly and smoothly as possible.
             </p>
-        </div>
+        </div >
 
         <!-- SERVICES -->
-        <div class=" p-3 my-3 border" id="ourservices" style="background-color: #74baffd5;">
+        <div class=" p-3 my-3 border cardScroll" id="ourservices"  style="background-color: #74baffd5;">
             
-            <p class="h1">🩺Our Services</p>
+            <p class="h1"  >🩺Our Services</p>
             <table class="table  table-hover">
                 <tbody>
                     <tr>
@@ -139,7 +163,7 @@
 
         </div>
 
-        <div class=" p-3 my-3 border bg-light" id="theexperts">
+        <div class=" p-3 my-3 border bg-light cardScroll" id="theexperts">
             <p class="h1">👩‍⚕️The Experts</p>
             <div class ="row justify-content-center">
                 <div class="card" style="width: 18rem;">
@@ -181,7 +205,7 @@
     </div>
 
 
-    <div class=" p-3 my-3  bg-light" id="additionalInfo">
+    <div class=" p-3 my-3  bg-light cardScroll" id="additionalInfo">
         <p class="h6 text-center">🗺 Contact Info</p>
         <div class = "container">
             <div class = "row justify-content-center">
