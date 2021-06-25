@@ -54,7 +54,7 @@
     }
     .centeredBottom {
         position: absolute;
-        top: 85%;
+        top: 80%;
         left: 50%;
 
         transform: translate(-50%, -50%);
@@ -100,7 +100,8 @@
                     </li>
                 </ul>
                 <form class="d-flex ms-4">
-                    <button type="button" onclick="dropDownSelect('serviceSelection', 'CustomKneeBrace')"class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookPopup">Book Now!</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookPopup">Book Now!</button>
+                    <!-- <button type="button" onclick="dropDownSelect('serviceSelection', 'StandCheckup')"class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmationPopup">Book Now!</button> -->
                 </form>
             </div>
         </div>
@@ -108,7 +109,7 @@
     
     <div class="card">
         <img src="seg3125lab/medicalclinic1.jpg" style="height:100vh" class="card-img-top">
-        <p class="h1 centered" style="color: black;background-color: #f8f9fa88; padding:30px; border: 1px solid #dee2e6!important;">Welcome to SEG Clinic 😊</p>
+        <p class="h1 centered" style="color: black;background-color: #f8f9fa88; padding:30px; border: 1px solid #dee2e6!important;">Welcome to SEG Clinic 🏥</p>
         <a class="h1 centeredBottom" style= "text-decoration: none; font-size: 3rem;" href="#hereforyou">▼</a>
     </div>
     
@@ -132,14 +133,9 @@
             <table class="table  table-hover">
                 <tbody>
                     <tr>
-                        <td class="h5">Custom Knee Brace</td>
-                        <td>$60 (Fitting) +$700* (Product)</td>
-                        <td><button type="button" onclick="dropDownSelect('serviceSelection', 'CustomKneeBrace')" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookPopup">Book</button></td>
-                    </tr>
-                    <tr>
-                        <td class="h5">COVID-19 Test (for Travel)</td>
-                        <td>$60</td>
-                        <td><button type="button"  onclick="dropDownSelect('serviceSelection', 'Covid19Test')" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookPopup">Book</button></td>
+                        <td class="h5">Allergy Consultation</td>
+                        <td>$100</td>
+                        <td><button type="button" onclick="dropDownSelect('serviceSelection', 'AllergyCon')" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookPopup">Book</button></td>
                     </tr>
                     <tr>
                         <td class="h5">Childhood Immunizations </td>
@@ -147,14 +143,19 @@
                         <td><button type="button" onclick="dropDownSelect('serviceSelection', 'ChildhoodImm')" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookPopup">Book</button></td>
                     </tr>
                     <tr>
+                        <td class="h5">COVID-19 Test (for Travel)</td>
+                        <td>$60</td>
+                        <td><button type="button"  onclick="dropDownSelect('serviceSelection', 'Covid19Test')" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookPopup">Book</button></td>
+                    </tr>
+                    <tr>
+                        <td class="h5">Custom Knee Brace</td>
+                        <td>$60 (Fitting) +$700* (Product)</td>
+                        <td><button type="button" onclick="dropDownSelect('serviceSelection', 'CustomKneeBrace')" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookPopup">Book</button></td>
+                    </tr>
+                    <tr>
                         <td class="h5">Standard Checkup</td>
                         <td>$60</td>
                         <td><button type="button" onclick="dropDownSelect('serviceSelection', 'StandCheckup')" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookPopup">Book</button></td>
-                    </tr>
-                    <tr>
-                        <td class="h5">Allergy Consultation</td>
-                        <td>$100</td>
-                        <td><button type="button" onclick="dropDownSelect('serviceSelection', 'AllergyCon')" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookPopup">Book</button></td>
                     </tr>
                 </tbody>
             </table>
@@ -206,7 +207,7 @@
 
 
     <div class=" p-3 my-3  bg-light cardScroll" id="additionalInfo">
-        <p class="h6 text-center">🗺 Contact Info</p>
+        <p class="h4 text-center">🗺 Contact Info</p>
         <div class = "container">
             <div class = "row justify-content-center">
                 <div class="col-xl">
@@ -214,7 +215,7 @@
                     width="500" height="300" style="border:0;width:100%" allowfullscreen="" loading="lazy"></iframe>
                 </div>
                 <div class = "col">
-                    <u>Our Hours:</u>
+                    <u>📅 Our Hours:</u>
                         <table>
                             <tbody>
                                 <tr>
@@ -232,7 +233,7 @@
                             </tbody>
                         </table>
                     <br>
-                    <u>Contact Us:</u>
+                    <u>📝 Contact Us:</u>
                     <table>
                         <tbody>
                             <tr>
@@ -262,18 +263,18 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Appointment Booking</h5>
+          <h5 class="modal-title" id="exampleModalLabel">📖 Appointment Booking</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">*Pick a service:</label>
                 <select id="serviceSelection">
-                    <option value="CustomKneeBrace">Custom Knee Brace</option>
-                    <option value="Covid19Test">COVID-19 Test (for Travel)</option>
-                    <option value="ChildhoodImm">Childhood Immunizations</option>
-                    <option value="StandCheckup">Standard Checkup</option>
                     <option value="AllergyCon">Allergy Consultation</option>
+                    <option value="ChildhoodImm">Childhood Immunizations</option>
+                    <option value="Covid19Test">COVID-19 Test (for Travel)</option>
+                    <option value="CustomKneeBrace">Custom Knee Brace</option>
+                    <option value="StandCheckup">Standard Checkup</option>
                 </select>
             </div>
 
@@ -343,5 +344,39 @@
           <button type="button" onclick="validateFields()" class="btn btn-primary">Book now</button>
         </div>
       </div>
+    </div>
+</div>
+
+<div class="modal fade" id="confirmationPopup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">✅ Confirmation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <p class="h4 text-center">Booking was Successful! 😊</p>
+                <br>
+                <p class="h6 text-center" id="confirmName">Name: Kanye West</p>
+                <p class="h6 text-center" id="confirmEmail">✉ kanyewest@gmail.com</p>
+                <p class="h6 text-center" id="confirmPhone">📞 555-555-5555</p>
+                <p class="h6 text-center" id="confirmCCNumber">💳 1234 1234 1234 1234</p>
+                <br>
+                <p class="h6 text-center" id="confirmService">Service: Standard Checkup</p>
+                <p class="h6 text-center" id="confirmDate">📅 11/20/2021</p>
+                <p class="h6 text-center" id="confirmTime">🕓 2:30pm</p>
+                <p class="h6 text-center" id="confirmExpert">Expert: Uziel Vertrees</p>
+                <br>
+                <p class="h6 text-center" id="confirmBookingNumber">Booking Number: 459308</p>
+
+
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
     </div>
 </div>

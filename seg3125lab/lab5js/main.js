@@ -97,33 +97,68 @@ function dropDownSelect(id, selection){
     
 }
 
+function bookingFinished(){
+    var firstName = document.getElementById("firstName");
+    var middleName = document.getElementById("middleName");
+    var lastName = document.getElementById("lastName");
+    var email= document.getElementById("emailInput");
+    var phoneNumber = document.getElementById("phoneInput");
+    var ccNumber = document.getElementById("ccInput");
+
+    var date = document.getElementById("dateInput");
+    var time = document.getElementById("timeInput");
+
+    var bookingNumber = Math.floor(Math.random() * (999999 - 100000) + 100000)
+
+    $(document.getElementById('confirmName')).text("Name: " + firstName.value + " " + middleName.value + " " + lastName.value);
+    $(document.getElementById('confirmEmail')).text("✉ " + email.value);
+    $(document.getElementById('confirmPhone')).text("📞 " + phoneNumber.value);
+    $(document.getElementById('confirmCCNumber')).text("💳 " + ccNumber.value);
+
+
+    $(document.getElementById('confirmService')).text("Service: " + $("#serviceSelection option:selected").text());
+    $(document.getElementById('confirmDate')).text("📅 " + date.value);
+    $(document.getElementById('confirmTime')).text("🕓 " + time.value);
+    $(document.getElementById('confirmExpert')).text("Expert: " + $("#expectSelection option:selected").text());
+
+    $(document.getElementById('confirmBookingNumber')).text("Booking Number: " + bookingNumber.toString());
+
+}
+
 function validateFields(){
     var elements = [];
     var check = true ;
-    elements.push(document.getElementById("firstName").value);
-    elements.push(document.getElementById("lastName").value);
+    elements.push(document.getElementById("firstName"));
+    elements.push(document.getElementById("lastName"));
 
-    elements.push(document.getElementById("emailInput").value);
-    elements.push(document.getElementById("phoneInput").value);
-    elements.push(document.getElementById("dateInput").value);
-    elements.push(document.getElementById("timeInput").value);
+    elements.push(document.getElementById("emailInput"));
+    elements.push(document.getElementById("phoneInput"));
+    elements.push(document.getElementById("dateInput"));
+    elements.push(document.getElementById("timeInput"));
 
-    elements.push(document.getElementById("ccInput").value);
-    elements.push(document.getElementById("cvcInput").value);
-    elements.push(document.getElementById("ccdateInput").value);
+    elements.push(document.getElementById("ccInput"));
+    elements.push(document.getElementById("cvcInput"));
+    elements.push(document.getElementById("ccdateInput"));
 
     for (val of elements){
-        if (val == ""){
+        if (val.value == ""){
             check = false;
-            
+            $(val).css('border-color',"#ff1100" );
+        }
+        else{
+            $(val).css('border-color',"#ced4da" );
+
         }
     }
     if (!check){
         alert("Properly fill out all marked fields!");
     }
     else{
-        alert("Booking successful!");
+        // alert("Booking successful!");
         $('#bookPopup').modal('hide');
+        
+        $('#confirmationPopup').modal('show');
+        bookingFinished();
     }
     
 
@@ -137,6 +172,10 @@ $(document).ready(function(){
         if (!isEmail("emailInput")){
             alert("Email format is incorrect!")
             $("#emailInput").val("");
+            $(this).css('border-color',"#ff1100" );
+        }
+        else{
+            $(this).css('border-color',"#ced4da" );
         }
     });
 
@@ -144,6 +183,10 @@ $(document).ready(function(){
         if (!isCCNumber("ccInput")){
             alert("Credit card number is invalid!")
             $("#ccInput").val("");
+            $(this).css('border-color',"#ff1100" );
+        }
+        else{
+            $(this).css('border-color',"#ced4da" );
         }
     });
 
@@ -151,6 +194,10 @@ $(document).ready(function(){
         if (!isCVCNumber("cvcInput")){
             alert("CVC number is invalid!")
             $("#cvcInput").val("");
+            $(this).css('border-color',"#ff1100" );
+        }
+        else{
+            $(this).css('border-color',"#ced4da" );
         }
     });
 
@@ -158,6 +205,10 @@ $(document).ready(function(){
         if (!isCCDateNumber("ccdateInput")){
             alert("CC Date is invalid!")
             $("#ccdateInput").val("");
+            $(this).css('border-color',"#ff1100" );
+        }
+        else{
+            $(this).css('border-color',"#ced4da" );
         }
     });
 
@@ -189,11 +240,17 @@ $(document).ready(function(){
     $('#timeInput').on('timeFormatError', function() {
         alert("Time format is incorrect!")
         $('#timeInput').val('');
+        $(this).css('border-color',"#ff1100" );
     });
 
     $('#timeInput').on('timeRangeError', function() {
         alert("Please select a time between 7am and 6pm")
         $('#timeInput').val('');
+        $(this).css('border-color',"#ff1100" );
+    });
+
+    $('#timeInput').on('changeTime', function() {
+        $(this).css('border-color',"#ced4da" );
     });
 
 
